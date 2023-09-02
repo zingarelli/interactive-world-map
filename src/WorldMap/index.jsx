@@ -15,7 +15,7 @@ export default function WorldMap() {
     // console.log(mapData);
     // console.log(populationData);
 
-    if (!mapData && !populationData) return <pre>Loading...</pre>;
+    if (!mapData || !populationData) return <pre>Loading...</pre>;
 
     return (<>
         <h1>World Population (2021)</h1>
