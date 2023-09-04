@@ -59,6 +59,11 @@ p {
 }
 
 /* World Map */
+.worldMap__graticules {
+  fill: none;
+  stroke: #E1E1E1;
+}
+
 .worldMap__country {
   fill: #137B80;
   stroke: #C0C0BB;
