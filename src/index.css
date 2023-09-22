@@ -50,9 +50,11 @@ p {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
@@ -75,4 +77,9 @@ p {
 
 .worldMap__globe {
   fill: #ECECEC;
+}
+
+.worldMap__cities {
+  fill: #7bbabd;
+  opacity: .5;
 }

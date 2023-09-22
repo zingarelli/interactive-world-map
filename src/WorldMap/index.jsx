@@ -1,4 +1,5 @@
 import Marks from "./Marks";
+import { useCities } from "./useCitiesData";
 import { useMapData } from "./useMapData";
 import { usePopulationData } from "./usePopulationData";
 
@@ -10,10 +11,12 @@ const height = 500;
 export default function WorldMap() {
     const mapData = useMapData();
     const populationData = usePopulationData();
+    const citiesData = useCities();
 
     // see what data returns to you
     // console.log(mapData);
     // console.log(populationData);
+    // console.log(citiesData)
 
     if (!mapData || !populationData) return <pre>Loading...</pre>;
 
@@ -24,6 +27,7 @@ export default function WorldMap() {
             <Marks
                 topology={mapData}
                 population={populationData}
+                cities={citiesData}
             />
         </svg>
     </>)
