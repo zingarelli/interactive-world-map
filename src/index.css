@@ -67,7 +67,7 @@ p {
 }
 
 .worldMap__country {
-  fill: #137B80;
+  fill: #8aced1;
   stroke: #C0C0BB;
 }
 
@@ -80,6 +80,6 @@ p {
 }
 
 .worldMap__cities {
-  fill: #7bbabd;
+  fill: #137B80;
   opacity: .5;
 }

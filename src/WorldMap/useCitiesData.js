@@ -10,10 +10,11 @@ export const useCities = () => {
     useEffect(() => {
         // the second argument of csv() can be any name, not necessarily row
         const anyName = d => {
-            // convert latitude and longitude to number using unary plus operator
+            // convert latitude, longitude and population to a number using unary plus operator
             d.lat = +d.lat;
             d.lng = +d.lng;
-            return d
+            d.population = +d.population;
+            return d;
         }
 
         // when you only have data => setData(data), you can simplify it by only using setData

@@ -2,7 +2,7 @@
 
 [Click here to read the English version of this Readme](#credits)
 
-Projeto que renderiza um mapa do mundo interativo, mostrando o nome do país e sua população ao passar o mouse sobre ele. Cidades com mais de 50.000 habitantes são também são exibidas como círculos no mapa.
+Projeto que renderiza um mapa do mundo interativo, mostrando o nome do país e sua população ao passar o mouse sobre ele. Cidades com mais de 50.000 habitantes são também são exibidas como círculos no mapa, sendo que os círculos aumentam em razão do tamanho de habitantes.
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
@@ -25,7 +25,7 @@ O componente `<WorldMap />` utiliza [dados de topologia do planeta Terra](https:
 
 Os dados de população estão atrelados a cada país e são exibidos quando a pessoa mantém o mouse sobre um país. Os números seguem o padrão americano, utilizando vírgula como separador de milhares (por exemplo, dois mil será escrito como "2,000").
 
-Este projeto foi atualizado para também mostrar as cidades com mais de 50.000 habitantes, representadas por pequenos círculos azuis no mapa. Os dados de cidades foi baseado [neste gist](https://gist.github.com/curran/13d30e855d48cdd6f22acdf0afe27286), compilado em outubro de 2019.
+Este projeto foi atualizado para também mostrar as cidades com mais de 50.000 habitantes, representadas por pequenos círculos azuis no mapa. Os círculos possuem certa opacidade e aumentam em proporção à quantidade de habitantes, fornecendo uma dica visual para aq densidade populacional. Os dados de cidades foi baseado [neste gist](https://gist.github.com/curran/13d30e855d48cdd6f22acdf0afe27286), compilado em outubro de 2019.
 
 ![GIF mostrando o mapa e a exibição de nome de país e sua população ao manter o mouse sobre um país](https://github.com/zingarelli/svg_smiley_face/assets/19349339/c0278e4f-b550-4015-9a6f-53ed648af7b9)
 
@@ -57,7 +57,8 @@ The `<WorldMap />` component uses [topology data of planet Earth](https://github
 
 Population data is linked to each country and is displayed when hovering over a country. Numbers follow the American convention, using a comma as a thousands separator.
 
-This project was updated to also display the cities of the world whose populations is more than 50k. Cities are represented on the map as tiny blue dots. Data is based on [this gist](https://gist.github.com/curran/13d30e855d48cdd6f22acdf0afe27286), which was compiled in October 2019.
+This project was updated to also display the cities of the world whose populations is more than 50k. Cities are represented on the map as tiny blue circles. These circles have some opacity and get bigger in proportion to the size of the population, representing a visual cue for population density. Data is based on [this gist](https://gist.github.com/curran/13d30e855d48cdd6f22acdf0afe27286), which was compiled in October 2019.
+
 
 ![GIF showing the map and the rendering of country name and population when hovering over a country](https://github.com/zingarelli/svg_smiley_face/assets/19349339/c0278e4f-b550-4015-9a6f-53ed648af7b9)
 

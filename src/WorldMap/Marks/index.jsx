@@ -10,7 +10,13 @@ const graticules = geoGraticule();
 // Draw paths to create the geometry of each country of the world.
 // It also displays that country's population when mousing over it. 
 // Finally, it also draw circles representing cities whose population is larger than 50k
-export default function Marks({ topology, population, cities }) {
+export default function Marks({
+    topology,
+    population,
+    cities,
+    sizeScale,
+    sizeValue
+}) {
     return (
         <g className="worldMap__marks">
             {/* // path creates a shape, based on path commands passed to the d property. See the index.css for properties that can be used to style stroke color and other stuff) */}
@@ -38,7 +44,14 @@ export default function Marks({ topology, population, cities }) {
             {cities.map(city => {
                 // projection is also a function that receives a point (two element array [longitude, latitude]) and returns a new two element array [x, y] with the pixel position of this point in the projection
                 const [x, y] = projection([city.lng, city.lat]);
-                return <circle key={`${x}_${y}`} className="worldMap__cities" cx={x} cy={y} r={1.5} />
+                return <circle
+                    key={`${x}_${y}`}
+                    className="worldMap__cities"
+                    cx={x}
+                    cy={y}
+                    // radius is based on how big is the population
+                    r={sizeScale(sizeValue(city))}
+                />
             })}
         </g>
     )
